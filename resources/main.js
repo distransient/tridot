@@ -1,11 +1,12 @@
+var loading = document.getElementsByClassName("loading")[0];
 var request = new XMLHttpRequest();
-request.open("Get", 'resources/model.json', false);
+request.open("Get", "resources/model.json", false);
 request.onreadystatechange = function() {
   if(request.readystate = 3) {
-    document.getElementsByClassName("loading").style.display = "block";
+    loading.style.visibility = "block";
   }
   if(request.readystate = 4) {
-    document.getElementsByClassName("loading").style.display = "none";
+    loading.style.visibility = "none";
   }
 }
 request.send(null);

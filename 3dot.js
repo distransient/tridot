@@ -1,4 +1,4 @@
-var 3dot = function(display) {
+var threedot = function(display, options) {
 
   if(!document.getElementById(display)) {
     console.error("3dot couldn't find the element by id " + display);
@@ -16,4 +16,10 @@ var 3dot = function(display) {
     console.error("3dot couldn't find a method to request animation frames");
     return -1;
   }
+  this.update();
 }
+
+threedot.prototype.update = function() {
+  console.log(this);
+}
+
