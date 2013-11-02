@@ -1,4 +1,6 @@
-# 3d-dotrender-DOM
+# Tridot
+
+Render some 3d stuff as 2d stuff with some dots, whatever
 
 ## Example
 
