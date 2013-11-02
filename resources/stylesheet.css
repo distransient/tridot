@@ -29,11 +29,6 @@ html{
   line-height: 1.3em;
 }
 
-body {
-  max-width: 50rem;
-  margin: 0 auto;
-}
-
 a {
   color: #f39;
   background: white;
@@ -62,13 +57,21 @@ p{
 header{
   display: block;
   position: fixed;
-  width: 100%;
   top: 0;
-  left: 0;
-  right: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 20rem;
+  margin-left: -10rem;
   padding: 1em 2em;
   background: #2c0;
   z-index: 1000;
+}
+
+@media (max-width: 20em) {
+  header{
+    left: 0;
+    margin: 0;
+  }
 }
 
 footer{
