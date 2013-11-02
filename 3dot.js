@@ -1,23 +1,19 @@
-//check for animation prefix
-var requestAnimationFrame = window.requestAnimationFrame ||
-                            window.mozRequestAnimationFrame ||
-                            window.webkitRequestAnimationFrame ||
-                            window.msRequestAnimationFrame ||
-                            return -1;
+var 3dot = function(display) {
 
-3dot = {};
-3dot.Dot = {};
-3dot.json = function(url) {
-  var request = new XMLHttpRequest();
-  request.open("Get", url, false);
-  request.send(null);
-  return this.parse(request.responseText);
+  if(!document.getElementById(display)) {
+    console.error("3dot couldn't find the element by id " + display);
+    return -1;
+  }
+
+  this.requestAnimationFrame =
+    window.requestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    0;
+
+  if(!this.requestAnimationFrame) {
+    console.error("3dot couldn't find a method to request animation frames");
+    return -1;
+  }
 }
-3dot.parse = function(json) {
-
-};
-
-(function() {
-  3dot.update();
-  requestAnimationFrame(this);
-}() );

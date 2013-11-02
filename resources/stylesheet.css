@@ -97,7 +97,7 @@ footer{
 }
 
 .loading{
-  display: none;
+  visibility: hidden;
   position: absolute;
   top: 50%;
   bottom: 50%;
