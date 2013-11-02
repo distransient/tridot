@@ -1,4 +1,4 @@
-var threedot = function(display, options) {
+var tridot = function(display, options) {
 
   if(!document.getElementById(display)) {
     console.error("3dot couldn't find the element by id " + display);
@@ -19,7 +19,7 @@ var threedot = function(display, options) {
   this.update();
 }
 
-threedot.prototype.update = function() {
+tridot.prototype.update = function() {
   console.log(this);
 }
 
