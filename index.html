@@ -15,21 +15,29 @@
 <body>
   <header>
     <h1>tridot.js</h1>
-    <p>By <a href="http://human-analog.com/">Michael Keating</a></p>
+    <p>By <a href="https://twitter.com/packagejson">Michael Keating</a></p>
     <p>If it doesn't work for you<br/> 
       <a href="http://browsehappy.com/?locale=en">
         install a decent web browser
       </a>
     </p>
+    <div class="controls">
+      <label for="size">dot size</label>
+      <input type="range" name="size" value="100" min="10" max="200"/>
+
+      <label for="size">dot roundness</label>
+      <input type="range" name="round" value="100" min="10" max="200"/>
+    </div>
   </header>
   
   <div class="canvas">
     <img class="loading" src="resources/loading.gif"/>
+    <div class="dot" style="top:30%;left:30%;"></div>
   </div>
   
   <footer>
     <p>
-      <a href="https://github.com/humanoidanalog/3d-dotrender-DOM">
+      <a href="https://github.com/humanoidanalog/tridot.js">
         Fork on Github
       </a>
     </p>

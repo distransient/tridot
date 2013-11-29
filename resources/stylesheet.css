@@ -5,19 +5,19 @@
 }
 
 ::selection {
-  color: white;
-  background: black;
+  color: #fafafa;
+  background: #222;
   text-shadow: none;
 }
 ::-moz-selection {
-  color: white;
-  background: black;
+  color: #fafafa;
+  background: #222;
   text-shadow: none;
 }
 
 html{
   background: #2c0;
-  color: white;
+  color: #fafafa;
   font-size: 100%;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
   Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -30,18 +30,18 @@ html{
 }
 
 a {
-  color: #f39;
-  background: white;
+  color: #b34bd1;
+  background: #fafafa;
   padding: .1em .4em;
   text-decoration: none;
 }
 
 a:focus,a:active,a:hover{
   outline: 0;
-  color: white;
-  background: #f39;
+  color: #fafafa;
+  background: #b34bd1;
   text-decoration: none;
-  outline: white thin dotted;
+  outline: #fafafa thin dotted;
 }
 
 h1 {
@@ -65,6 +65,27 @@ header{
   padding: 1em 2em;
   background: #2c0;
   z-index: 1000;
+}
+
+.controls {
+  color: #b34bd1;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 110%;
+  padding: 1em;
+  text-align: right;
+}
+
+.controls label {
+  float: left;
+  vertical-align: 25%;
+  font-size: .9em;
+}
+
+.controls label:before {
+  content: ' ';
+  display: block;
 }
 
 @media (max-width: 20em) {
@@ -94,7 +115,7 @@ footer{
   bottom: 0;
   left: 0;
   right: 0;
-  background: white;
+  background: #fafafa;
 }
 
 .loading{
@@ -104,4 +125,12 @@ footer{
   bottom: 50%;
   left: 50%;
   right: 50%;
+}
+
+.dot {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  border-radius: 1em;
+  background: #2c0;
 }
